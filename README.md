@@ -4,8 +4,8 @@
 
 ## 1. 🎯기획 의도
 
-<img style = 'width: 1500px' src='../gb_0900_icm/crew_station_발표/슬라이드4.JPG'>
-<img style = 'width: 1500px' src='../gb_0900_icm/crew_station_발표/슬라이드5.JPG'>
+![슬라이드4](https://github.com/user-attachments/assets/7dff3ced-8d84-474c-a9f3-11416007f2aa)![슬라이드5](https://github.com/user-attachments/assets/e0b8e732-f814-43d2-a98a-5cbd88c7b72b)
+
 
 현대의 청년들은 **혼자 여행**에 대한 로망을 갖고 있지만,  
 실제로는 아래와 같은 문제를 겪고 있습니다.
@@ -24,7 +24,7 @@
 
 ## 2. 💡기대 효과
 
-<img style = 'width: 1500px' src='../gb_0900_icm/crew_station_발표/슬라이드7.JPG'>
+![슬라이드7](https://github.com/user-attachments/assets/cba173d2-d740-4ae9-86fa-30ab452d368e)
 
 ### 1️. 경제적 부담 완화와 기회 형평성 제고
 
@@ -102,12 +102,11 @@
 
 ## 4. 🗂️ERD
 
-<img style = 'width: 1500px' src='포폴/이미지/erd.png'>
+<img width="5002" height="6322" alt="erd" src="https://github.com/user-attachments/assets/a3dbaa13-8417-41af-b848-97001b241b2c" />
 
 ## 5. 👩🏻‍💻담당 업무
 
-<img src='포폴/이미지/back.png'>
-
+<img width="1035" height="293" alt="back" src="https://github.com/user-attachments/assets/dcbcfb56-1f8b-468d-9cb1-4004a0cce6b3" />
 ### 백엔드
 
 ▶ 회원가입
@@ -147,7 +146,7 @@
 #### **( 1 )** 회원과 같은 서비스가 되어버리는 게스트
 
 🌩문제 상황🌩  
-<img src="포폴/이미지/게스트 글 작성.png">
+<img width="1918" height="992" alt="게스트 글 작성" src="https://github.com/user-attachments/assets/45f6511b-439d-42e7-ad21-7cf00acc9d26" />
 
 게스트 로그인 시에도 게시글 작성 페이지에 접근이 가능했습니다.
 (게스트 계정은 작성 기능을 사용할 수 없어야 함)
@@ -160,17 +159,18 @@
 
 1. GuestInterceptor 생성
 
-<img src="포폴/이미지/guestInterceptor1.png">
-<img src="포폴/이미지/guestInterceptor2.png">
+<img width="1022" height="865" alt="guestInterceptor1" src="https://github.com/user-attachments/assets/aa6bab11-8c07-4ab2-94ea-27d937810092" />
+<img width="1026" height="535" alt="guestInterceptor2" src="https://github.com/user-attachments/assets/f5aef701-6f8a-4cd8-9186-497a8f2a7d77" />
+
 
 -   로그인한 사용자의 username이 이메일 형식인지 확인 후
 -   이메일 형식이 아니면 게스트 계정으로 분류 했습니다.
 
 2. 게스트 계정이 회원 전용 페이지에 접근하려고 하면
 
-<img src="포폴/이미지/web1.png">
+<img width="638" height="896" alt="web1" src="https://github.com/user-attachments/assets/cb20ce3f-8222-416e-9c69-21d8fb482b86" />
+<img width="626" height="542" alt="web2" src="https://github.com/user-attachments/assets/fcd0ffba-df3e-4069-863e-2a5babbcbc56" />
 
-<img src="포폴/이미지/web2.png">
 
 -   로그아웃 처리 후
 -   로그인 페이지로 리다이렉트 하였습니다.
@@ -182,8 +182,8 @@
 #### 소셜 로그인 후 일반 회원 로그인 불가
 
 🌩문제 상황🌩  
-<img src="포폴/이미지/회원가입후로그인.png">
-<img src="포폴/이미지/문제2.png">
+<img width="581" height="149" alt="문제2" src="https://github.com/user-attachments/assets/55459844-2da2-4b4a-9cfe-180772925fe5" /><img width="1793" height="176" alt="회원가입후로그인" src="https://github.com/user-attachments/assets/2591f71b-2c10-4482-89f5-1b7c77cfae52" />
+
 
 소셜 로그인(카카오, 네이버, 구글 등) 이후 로그인 페이지에서
 일반 로그인 시도 시 정상적인 계정 정보 입력에도 로그인이 되지 않았습니다.
@@ -196,19 +196,20 @@
 
 1. resetCookies 메서드 추가
 
-<img src="포폴/이미지/쿠키 삭제 메소드.png">
+<img width="850" height="705" alt="쿠키 삭제 메소드" src="https://github.com/user-attachments/assets/7e677caa-b0f2-46c2-9abe-80652c58ca16" />
+
 
 -   모든 쿠키 및 Redis에 저장된 refreshToken을 삭제하는 메서드 생성했습니다.
 
 2. service.js 수정
 
-<img src="포폴/이미지/쿠키_서비스.png">
+<img width="723" height="237" alt="쿠키_서비스" src="https://github.com/user-attachments/assets/724721c9-06f6-4f07-b8fd-9ca8315fe579" />
 
 -   로그인 요청 전 resetCookies를 비동기(async)로 실행하도록 수정했습니다.
 
 3. event.js 수정
 
-<img src="포폴/이미지/쿠키 삭제 사용.png">
+<img width="277" height="54" alt="쿠키 삭제 사용" src="https://github.com/user-attachments/assets/7da2ce58-b232-428a-aaad-502dca2bb474" />
 
 -   로그인 페이지 로드 시점에 `memberService.resetCookies();` 호출하여
     기존 쿠키 및 세션 데이터 초기화했습니다.
@@ -219,7 +220,7 @@
 #### **(2)** 소셜 로그인 같은 이메일 사용시 같은 회원으로 인식
 
 🌩문제 상황🌩  
-<img src="포폴/이미지/기존코드.png">
+<img width="1231" height="682" alt="기존코드" src="https://github.com/user-attachments/assets/7af9eca3-758e-41da-ad1b-41a8a5c41bae" />
 
 서로 다른 소셜 로그인이 하나의 이메일을 사용하는 경우, 신규 회원 가입 창이 아닌 기존 회원으로 인식되어 바로 로그인이 되는 문제가 발생했습니다.
 
@@ -230,25 +231,26 @@
 
 1. MemberMapper.xml 수정
 
-<img src="포폴/이미지/mapper-xml.png">
+<img width="1696" height="493" alt="mapper-xml" src="https://github.com/user-attachments/assets/2d7316e7-c83a-444d-84b2-d90937e6577a" />
+
 
 -   provider 조건을 추가하여 이메일과 소셜 제공자를 함께 조회하도록 수정했습니다.
 
 2. MemberMapper.java 수정
 
-<img src="포폴/이미지/mapper-java.png">
+<img width="1449" height="748" alt="mapper-java" src="https://github.com/user-attachments/assets/33c2b508-b4ca-4cf0-82ea-11e450e07f49" />
 
 -   provider를 매개변수로 추가하여 DAO 계층에서 전달 가능하도록 변경했습니다.
 
 3. MemberDAO.java 수정
 
-<img src="포폴/이미지/dao.png">
+<img width="1175" height="682" alt="dao" src="https://github.com/user-attachments/assets/5e7a46b9-9857-4249-a365-81ef745b0f59" />
 
 -   이메일과 provider를 함께 조건으로 사용하여 정확한 회원 조회가 가능하도록 수정했습니다.
 
 4. CustomOAuth2UserService 수정
 
-<img src="포폴/이미지/service.png">
+<img width="1226" height="864" alt="service" src="https://github.com/user-attachments/assets/efe08791-1a74-472a-9b31-e1e1e485e843" />
 
 -   OAuth2 인증 과정에서 registrationId를 통해 소셜 제공자(Google, Naver, Kakao 등)를 식별하고, 사용자 정보에서 provider 값을 추출하여 회원 조회 시 이메일과 함께 비교하도록 개선했습니다.
 
@@ -256,21 +258,24 @@
 
 🌩문제 상황🌩
 
-<img src="포폴/이미지/6-2_오류.png">
+<img width="1171" height="180" alt="6-2_오류" src="https://github.com/user-attachments/assets/cfdd626a-b919-48bb-b019-dfd31aaba855" />
+
+
 
 `BadSqlGrammarException` 예외가 발생했습니다.
 
 🚨문제 원인🚨
 
-<img src="포폴/이미지/6-2_기존코드.png">
-<img src="포폴/이미지/6-2_기존코드2.png">
+<img width="1276" height="72" alt="6-2_기존코드" src="https://github.com/user-attachments/assets/b1e8100c-e253-42ad-a615-fc2763208514" />
+<img width="657" height="97" alt="6-2_기존코드2" src="https://github.com/user-attachments/assets/767f0f80-0778-4618-a313-442908240a63" />
 
 PostgreSQL에서는 `ENUM`이 사용자 정의 타입(`TYPE`)으로 처리되는데, Java 코드에서 `provider` 값을 단순 `String`으로 전달하면서 타입 불일치가 발생했습니다. 이로 인해 SQL 문법 오류가 발생한 것입니다.
 
 🚀해결 방법🚀
 
-<img src="포폴/이미지/변경코드2.png">
-<img src="포폴/이미지/변경코드.png">
+<img width="870" height="129" alt="변경코드" src="https://github.com/user-attachments/assets/d478db88-786c-42d5-9b5a-2c8f2777e34c" />
+<img width="1025" height="71" alt="변경코드2" src="https://github.com/user-attachments/assets/37c13585-3b2f-4829-bf14-d7618d733792" />
+
 
 `MemberProvider` Enum 클래스에서 `provider` 값을 매핑하여, 문자열이 아닌 Enum 객체로 변환한 후 DAO에 전달하도록 수정했습니다. 이를 통해 PostgreSQL의 ENUM 타입과 정확히 일치하는 값으로 쿼리를 실행할 수 있게 되었고, 타입 불일치로 인한 오류를 해결했습니다.
 
@@ -279,7 +284,7 @@ PostgreSQL에서는 `ENUM`이 사용자 정의 타입(`TYPE`)으로 처리되는
 -   테스트 케이스 설계 및 실행 절차를 기반으로 QA 테스트 문서를 작성하고 기능별 검증을 수행했습니다.
 -   **JUnit5를 활용한 단위 테스트 및 통합 테스트**를 통해 애플리케이션의 안정성과 기능 완성도를 검증했습니다.
 
-<img src="포폴/이미지/qa.png" />
+<img width="944" height="436" alt="qa" src="https://github.com/user-attachments/assets/f417c1dd-9c04-4a74-b88b-002fb1378aef" />
 
 ## 8. 📝총평
 
