@@ -246,7 +246,7 @@
 
 4. CustomOAuth2UserService 수정
 
-<img width="1226" height="864" alt="service" src="https://github.com/user-attachments/assets/efe08791-1a74-472a-9b31-e1e1e485e843" />
+<img width="1128" height="921" alt="스크린샷 2025-10-30 170219" src="https://github.com/user-attachments/assets/cc72d0e7-24ff-48d7-be6f-daac9fe8d434" />
 
 -   OAuth2 인증 과정에서 registrationId를 통해 소셜 제공자(Google, Naver, Kakao 등)를 식별하고, 사용자 정보에서 provider 값을 추출하여 회원 조회 시 이메일과 함께 비교하도록 개선했습니다.
 
@@ -269,7 +269,7 @@ PostgreSQL에서는 `ENUM`이 사용자 정의 타입(`TYPE`)으로 처리되는
 
 🚀해결 방법🚀
 
-<img width="870" height="129" alt="변경코드" src="https://github.com/user-attachments/assets/d478db88-786c-42d5-9b5a-2c8f2777e34c" />
+<img width="1154" height="922" alt="스크린샷 2025-10-30 170549" src="https://github.com/user-attachments/assets/ff425aff-5b25-458d-88e8-a16d33305b54" />
 <img width="1025" height="71" alt="변경코드2" src="https://github.com/user-attachments/assets/37c13585-3b2f-4829-bf14-d7618d733792" />
 
 
